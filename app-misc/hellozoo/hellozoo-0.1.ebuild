@@ -18,9 +18,14 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 src_compile() {
-	emake || die
+	ebegin "Starting compilation..."
+		emake || die
+	eend "Compilation finished..."
 }
 
 src_install() {
-	emake install || die
+	ebegin "Installing..."
+	exeinto /usr/sbin
+		exeins hellozoo || die
+	eend "Installation finished"
 }
