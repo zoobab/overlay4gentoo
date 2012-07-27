@@ -26,6 +26,6 @@ src_compile() {
 src_install() {
 	ebegin "Installing in /usr/sbin"
 	exeinto /usr/sbin
-		doexe uwfirmforce || die
+		newexe UWfirmforce uwfirmforce || die
 	eend
 }
