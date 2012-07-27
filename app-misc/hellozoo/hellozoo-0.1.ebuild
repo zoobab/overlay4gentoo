@@ -26,6 +26,6 @@ src_compile() {
 src_install() {
 	ebegin "Installing..."
 	exeinto /usr/sbin
-		exeins hellozoo || die
+		doexe hellozoo || die
 	eend "Installation finished"
 }
