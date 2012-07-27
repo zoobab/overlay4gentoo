@@ -163,11 +163,6 @@ src_install() {
 	
 	emake DESTDIR="${D}" install || die
 
-	ebegin "Installing initscripts..."
-		exeinto /etc/init.d
-			newexe ${FILESDIR}/restund.init restund || die
-	eend
-
 	# When you hit a failure with emake, do not just use make. It is
 	# better to fix the Makefiles to allow proper parallelization.
 	# If you fail with that, use "emake -j1", it's still better than make.
@@ -177,8 +172,8 @@ src_install() {
 	# you also need to specify mandir and infodir, since they were
 	# passed to ./configure as absolute paths (overriding the prefix
 	# setting).
-    # emake \
-    #	prefix="${D}"/usr/include \
+	# emake \
+	#	prefix="${D}"/usr/include \
 	#	mandir="${D}"/usr/share/man \
 	#	infodir="${D}"/usr/share/info \
 	#	libdir="${D}"/usr/$(get_libdir) \
