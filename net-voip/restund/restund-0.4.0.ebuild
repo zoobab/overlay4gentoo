@@ -22,7 +22,7 @@ EAPI=4
 # inherit eutils, as a large amount of important functionality has been
 # moved there. For example, the epatch call mentioned below wont work
 # without the following line:
-inherit eutils jjtemplate
+inherit eutils
 
 # A well-used example of an eclass function that needs eutils is epatch. If
 # your source needs patches applied, it's suggested to put your patch in the
