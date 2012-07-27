@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="zoobab hello world for haxogreen"
 HOMEPAGE="http://www.zoobab.com/haxogreen-gentoo-ebuild"
-SRC_URI="https://github.com/zoobab/overlay4gentoo/blob/master/src/hellozoo-0.1.tgz"
+SRC_URI="https://github.com/zoobab/overlay4gentoo/blob/master/src/hellozoo-0.1.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
