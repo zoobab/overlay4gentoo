@@ -6,9 +6,9 @@ EAPI=4
 
 inherit eutils
 
-DESCRIPTION="zoobab hello world for haxogreen"
-HOMEPAGE="http://www.zoobab.com/haxogreen-gentoo-ebuild"
-SRC_URI="http://www.zoobab.com/local--files/haxogreen-gentoo-ebuild/hellozoo-0.1.tar.gz"
+DESCRIPTION="uwfirmforce"
+HOMEPAGE="http://uwfirmforce.wikidot.com"
+SRC_URI="http://www.zoobab.com/local--files/haxogreen-gentoo-ebuild/${PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -26,6 +26,6 @@ src_compile() {
 src_install() {
 	ebegin "Installing in /usr/sbin"
 	exeinto /usr/sbin
-		doexe hellozoo || die
+		doexe uwfirmforce || die
 	eend
 }
