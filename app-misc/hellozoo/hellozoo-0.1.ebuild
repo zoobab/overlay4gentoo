@@ -18,9 +18,9 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 src_compile() {
-	ebegin "Compilation started"
+#	ebegin "Compilation started"
 	emake || die
-	eend
+#	eend
 }
 
 src_install() {
