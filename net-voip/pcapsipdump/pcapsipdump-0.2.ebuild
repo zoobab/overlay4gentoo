@@ -22,6 +22,6 @@ src_compile() {
 	emake || die
 }
 
-src_installl() {
+src_install() {
 	dosbin pcapsipdump || die
 }
