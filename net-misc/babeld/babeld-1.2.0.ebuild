@@ -21,5 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	dosbin babeld || die
+	newman "${S}"/babeld.man babeld.8 || die
+	dodoc "${S}"/{README,CHANGES} || die
 }
