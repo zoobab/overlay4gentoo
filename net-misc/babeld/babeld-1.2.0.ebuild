@@ -5,8 +5,8 @@
 EAPI=4
 
 DESCRIPTION="Babeld routing daemon"
-HOMEPAGE="http://babeld.fr"
-SRC_URI="http://172.20.0.1:8000/babeld-1.2.0.tar.gz"
+HOMEPAGE="Babel a loop-avoiding distance-vector routing protocol"
+SRC_URI="http://www.pps.univ-paris-diderot.fr/~jch/software/files/babeld-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
