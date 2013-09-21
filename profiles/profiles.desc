@@ -1,2 +1,3 @@
+amd64   common					stable
 amd64   webserver               stable
 amd64   ftpserver               stable
