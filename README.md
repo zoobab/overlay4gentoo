@@ -3,6 +3,10 @@ overlay4gentoo
 
 overlay4gentoo is my personal overlay of packages
 
-This is just a test commit
+server profiles
+===============
 
-This is zoobab
+You need some basic tools in order to make it work:
+
+app-portage/eix
+app-portage/layman
