@@ -10,3 +10,5 @@ You need some basic tools in order to make it work:
 
 app-portage/eix
 app-portage/layman
+
+HSBXL workshop
