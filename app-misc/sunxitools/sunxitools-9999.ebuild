@@ -21,7 +21,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-#src_install() {
-#
-#
-#}
+src_install() {
+}
