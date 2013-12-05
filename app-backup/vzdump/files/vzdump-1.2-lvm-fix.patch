@@ -1,0 +1,13 @@
+# Fix from this page: http://lowendtalk.com/discussion/15063/vzdump-snapshot-mode-not-working
+diff -urN vzdump-1.2/VZDump.pm vzdump-1.2-new/VZDump.pm
+--- vzdump-1.2/VZDump.pm	2009-10-22 08:03:07.000000000 +0000
++++ vzdump-1.2-new/VZDump.pm	2013-12-05 10:08:26.652214726 +0000
+@@ -619,7 +619,7 @@
+     my $cmd = "lvs --units m --separator ':' --noheadings -o vg_name,lv_name,lv_size";
+     if (my $fd = IO::File->new ("$cmd 2>/dev/null|")) {
+ 	while (my $line = <$fd>) {
+-	    if ($line =~ m|^\s*(\S+):(\S+):(\d+(\.\d+))M$|) {
++		if ($line =~ m|^\s*(\S+):(\S+):(\d+([\.,]\d+))[mM]$|) {
+ 		my $vg = $1;
+ 		my $lv = $2;
+ 		$devmapper->{"/dev/$vg/$lv"} = [$vg, $lv];
