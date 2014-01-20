@@ -1,0 +1,28 @@
+diff -ur sipsak-0.9.6/sipsak.h sipsak-0.9.6.new/sipsak.h
+--- sipsak-0.9.6/sipsak.h	2006-01-28 21:11:50.000000000 +0000
++++ sipsak-0.9.6.new/sipsak.h	2013-04-02 14:21:01.000000000 +0000
+@@ -102,11 +102,7 @@
+ # define FQDN_SIZE   100
+ #endif
+ 
+-#ifdef HAVE_CONFIG_H
+-# define SIP_T1 DEFAULT_TIMEOUT
+-#else
+-# define SIP_T1 500
+-#endif
++#define SIP_T1 150
+ 
+ #define SIP_T2 8*SIP_T1
+ 
+diff -ur sipsak-0.9.6/transport.c sipsak-0.9.6.new/transport.c
+--- sipsak-0.9.6/transport.c	2006-01-28 21:11:34.000000000 +0000
++++ sipsak-0.9.6.new/transport.c	2013-04-02 14:21:47.000000000 +0000
+@@ -286,7 +286,7 @@
+ 			}
+ 		}
+ 		senddiff = deltaT(&(srt->starttime), &(srt->recvtime));
+-		if (senddiff > (float)64 * (float)SIP_T1) {
++		if (senddiff > inv_final) {
+ 			if (timing == 0) {
+ 				if (verbose>0)
+ 					printf("*** giving up, no final response after %.3f ms\n", senddiff);
