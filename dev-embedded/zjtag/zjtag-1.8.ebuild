@@ -25,7 +25,7 @@ S=${WORKDIR}/${PN}.source_${PV}/src
 
 src_prepare() {
 	cd "${S}"
-    epatch ${FILESDIR}/${P}-simpler-Makefile.patch || die
+    epatch ${FILESDIR}/${P}-simpler-makefile.patch || die
 }
 
 src_compile() {
