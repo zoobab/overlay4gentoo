@@ -23,6 +23,11 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}.source_${PV}/src
 
+src_prepare() {
+	cd "${S}"
+    epatch ${FILESDIR}/${P}-simpler-Makefile.patch || die
+}
+
 src_compile() {
 	ebegin "Compilation started"
 		emake || die
