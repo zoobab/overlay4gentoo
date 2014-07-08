@@ -28,7 +28,7 @@ SLOT="0"
 
 [[ ${PV} == *9999 ]] || \
 KEYWORDS="amd64 arm ppc ppc64 x86"
-IUSE="doc ftdi ncurses readline"
+IUSE="doc ftdi ncurses readline linuxgpio"
 
 RDEPEND="virtual/libusb:1
 	ftdi? ( dev-embedded/libftdi )
@@ -49,6 +49,7 @@ src_configure() {
 	export ac_cv_lib_ftdi_ftdi_usb_get_strings=$(usex ftdi)
 	export ac_cv_lib_ncurses_tputs=$(usex ncurses)
 	export ac_cv_lib_readline_readline=$(usex readline)
+	econf $(use_enable linuxgpio)
 	default
 }
 
