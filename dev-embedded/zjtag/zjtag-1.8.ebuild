@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="zJTAG is an EJTAG Debrick Utility based on BrJTAG"
 HOMEPAGE="http://zjtag.sourceforge.net"
-SRC_URI="http://filez.zoobab.com/${P}/${P}-${PV}.zip
+SRC_URI="http://filez.zoobab.com/${PN}/${P}.zip
 		http://ftp.jaist.ac.jp/pub/sourceforge/z/project/zj/zjtag/v${PV}/${P}.zip"
 
 LICENSE="BSD"
