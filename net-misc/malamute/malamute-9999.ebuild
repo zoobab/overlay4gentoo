@@ -22,8 +22,8 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-		eautoreconf || die
-		eautomake || die
+	eautoreconf || die
+	eautomake || die
 }
 
 src_compile() {
