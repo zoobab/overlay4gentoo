@@ -27,13 +27,10 @@ src_prepare() {
 }
 
 src_compile() {
-	ebegin "Compilation started"
-		emake || die
-	eend
+	emake || die
 }
 
 src_install() {
-	ebegin "Installing in /usr/sbin"
 	exeinto /usr/sbin
 		newexe src/.libs/malamute malamute || die
 		newexe src/.libs/mshell mshell || die
