@@ -1,6 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+# 
+# TODO:
+# 1. /etc/malamute default config(s)
+# 2. init.d
+# 3. systemd
 
 EAPI=4
 
