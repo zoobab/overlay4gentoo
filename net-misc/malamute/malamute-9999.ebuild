@@ -12,7 +12,7 @@ EAPI=4
 inherit git-2 autotools
 
 DESCRIPTION="The ZeroMQ Enterprise Messaging Broker"
-HOMEPAGE="https://github.com/linux-sunxi/sunxi-tools"
+HOMEPAGE="https://github.com/zeromq/malamute"
 SRC_URI=""
 
 EGIT_REPO_URI="https://github.com/zeromq/malamute.git"
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND=""
+DEPEND="net-libs/czmq"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
