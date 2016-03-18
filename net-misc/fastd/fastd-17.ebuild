@@ -18,12 +18,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-#src_compile() {
-#	emake || die
-#}
-
 src_install() {
-	dosbin fastd || die
-	newman "${S}"/fastd.man fastd.8 || die
-	dodoc "${S}"/{README,CHANGES} || die
+	dosbin src/astd || die
+#	newman "${S}"/fastd.man fastd.8 || die
+#	dodoc "${S}"/{README,CHANGES} || die
 }
