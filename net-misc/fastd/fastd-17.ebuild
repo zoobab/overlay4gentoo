@@ -4,6 +4,8 @@
 
 EAPI=4
 
+inherit cmake-utils
+
 DESCRIPTION="Fast and Secure Tunneling Daemon (fastd)"
 HOMEPAGE="https://projects.universe-factory.net/projects/fastd/wiki"
 SRC_URI="https://projects.universe-factory.net/attachments/download/81/${PN}-${PV}.tar.xz"
@@ -16,9 +18,9 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	emake || die
-}
+#src_compile() {
+#	emake || die
+#}
 
 src_install() {
 	dosbin fastd || die
