@@ -19,7 +19,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_install() {
-	dosbin src/astd || die
+	dosbin src/fastd || die
 #	newman "${S}"/fastd.man fastd.8 || die
 #	dodoc "${S}"/{README,CHANGES} || die
 }
